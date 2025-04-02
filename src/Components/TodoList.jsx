@@ -16,7 +16,7 @@ const TodoList = ({ todos, onDelete }) => {
   return (
     <div className="mt-5 w-96" ref={listRef}>
       {todos.length === 0 ? (
-        <p className="text-gray-400 text-center">No tasks yet.</p>
+        <p className="text-gray-300 text-center">No tasks yet.</p>
       ) : (
         todos.map((task, index) => (
           <TodoItem key={index} task={task} onDelete={onDelete} />
