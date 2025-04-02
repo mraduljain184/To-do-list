@@ -4,7 +4,13 @@ import TodoList from "./Components/TodoList";
 
 function App() {
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    return JSON.parse(localStorage.getItem("todos")) || [];
+  });
+  
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (task) => setTodos([...todos, task]);
   const deleteTodo = (taskToDelete) =>
