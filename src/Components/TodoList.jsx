@@ -13,6 +13,7 @@ const TodoList = ({ todos, onDelete }) => {
     );
   }, [todos]);
 
+  
   return (
     <div className="mt-5 w-96" ref={listRef}>
       {todos.length === 0 ? (
