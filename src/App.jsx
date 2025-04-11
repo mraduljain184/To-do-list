@@ -8,8 +8,6 @@ function App() {
     return JSON.parse(localStorage.getItem("todos")) || [];
   });
   
-
-  
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);

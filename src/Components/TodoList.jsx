@@ -9,7 +9,7 @@ const TodoList = ({ todos, onDelete }) => {
     gsap.fromTo(
       listRef.current.children,
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }
+      { opacity: 1, y: 0, duration: 1, stagger: 0.1 }
     );
   }, [todos]);
 

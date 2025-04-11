@@ -15,7 +15,7 @@ const AddTodo = ({ onAdd }) => {
       <input
         type="text"
         value={task}
-        onChange={(e) => setTask(e.target.value)}
+        onChange={(p) => setTask(p.target.value)}
         className="p-2 rounded-md border border-gray-400 text-white"
         placeholder="Add a new task..."
       />
